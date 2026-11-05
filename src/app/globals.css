@@ -1,0 +1,178 @@
+@import url("https://api.fontshare.com/v2/css?f%5B%5D=excon@400,500,600,700,800&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+  Design tokens — "Charitable" style (charitabletemplate.webflow.io/home-pages/home-v1)
+  Palette: bright green #3FB33D · deep green #0F623A / #287E55 · dark #063936 / #215546
+           cream #FFF7E1 · sage neutrals #E0E1CC / #BEC7B4 / #819B89 / #4E7666
+  Typeface: Excon (Fontshare) for both headings and body copy.
+*/
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: "Excon", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-heading: "Excon", "Excon Fallback", ui-sans-serif, system-ui, sans-serif;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  /* Extra brand colors from the Charitable styleguide */
+  --color-leaf: var(--leaf);
+  --color-sage: var(--sage);
+  --color-deep: var(--deep);
+  --color-cream: var(--cream);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Brand accents from the styleguide */
+  --leaf: #3fb33d;   /* Primary 100 — bright green accent */
+  --sage: #287e55;   /* Secondary 300 — mid green */
+  --deep: #063936;   /* Neutral 800 — near-black green text */
+  --cream: #fff7e1;  /* Secondary 100 / Neutral 200 — warm cream */
+
+  --background: #ffffff;
+  --foreground: #063936;
+  --card: #ffffff;
+  --card-foreground: #063936;
+  --popover: #ffffff;
+  --popover-foreground: #063936;
+  --primary: #0f623a;    /* Secondary 200 — deep green actions */
+  --primary-foreground: #ffffff;
+  --secondary: #fff7e1;  /* cream sections & pills */
+  --secondary-foreground: #215546;
+  --muted: #f4f6eb;      /* whisper sage for subtle surfaces */
+  --muted-foreground: #4e7666;
+  --accent: #e6ecd9;     /* sage tint for hovers */
+  --accent-foreground: #215546;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #e2e5d4;
+  --input: #dfe3d2;
+  --ring: #3fb33d;
+  --chart-1: #3fb33d;
+  --chart-2: #287e55;
+  --chart-3: #ffc46b;
+  --chart-4: #819b89;
+  --chart-5: #215546;
+  --sidebar: #fbfcf5;
+  --sidebar-foreground: #063936;
+  --sidebar-primary: #0f623a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #fff7e1;
+  --sidebar-accent-foreground: #215546;
+  --sidebar-border: #e2e5d4;
+  --sidebar-ring: #3fb33d;
+}
+
+.dark {
+  --leaf: #4ec24c;
+  --background: #072723;
+  --foreground: #eaf1e3;
+  --card: #0c342f;
+  --card-foreground: #eaf1e3;
+  --popover: #0c342f;
+  --popover-foreground: #eaf1e3;
+  --primary: #4ec24c;
+  --primary-foreground: #06301f;
+  --secondary: #11433a;
+  --secondary-foreground: #f4efd8;
+  --muted: #0e3a34;
+  --muted-foreground: #9cb8a5;
+  --accent: #16463c;
+  --accent-foreground: #f0f6ea;
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: rgba(255, 255, 255, 0.12);
+  --input: rgba(255, 255, 255, 0.16);
+  --ring: #4ec24c;
+  --chart-1: #4ec24c;
+  --chart-2: #34a86a;
+  --chart-3: #ffc46b;
+  --chart-4: #819b89;
+  --chart-5: #a6d9a0;
+  --sidebar: #0c342f;
+  --sidebar-foreground: #eaf1e3;
+  --sidebar-primary: #4ec24c;
+  --sidebar-primary-foreground: #06301f;
+  --sidebar-accent: #11433a;
+  --sidebar-accent-foreground: #f4efd8;
+  --sidebar-border: rgba(255, 255, 255, 0.12);
+  --sidebar-ring: #4ec24c;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-heading tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-primary text-primary-foreground;
+  }
+}
+
+/* Slim, theme-aware scrollbars for long lists */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(72, 126, 95, 0.35);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(40, 126, 85, 0.55);
+  }
+}
+
+/* Subtle dotted pattern used in hero / newsletter sections */
+.bg-dots {
+  background-image: radial-gradient(rgba(40, 126, 85, 0.14) 1.5px, transparent 1.5px);
+  background-size: 20px 20px;
+}
+.dark .bg-dots {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1.5px, transparent 1.5px);
+}
