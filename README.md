@@ -20,14 +20,14 @@ ProChesta is a community-driven platform to create, join, and track social servi
 
 ## 🛠 Tech Stack
 
-| Category | Technology |
-| --- | --- |
-| Framework | [Next.js](https://nextjs.org/) (React 19) |
-| Styling | Tailwind CSS 4, shadcn/ui, Framer Motion |
-| Forms & Validation | React Hook Form, Zod |
-| State & Auth | React Context API, JWT-based auth |
-| Notifications | Sonner (toasts) |
-| Deployment | Vercel |
+| Category           | Technology                                |
+| ------------------ | ----------------------------------------- |
+| Framework          | [Next.js](https://nextjs.org/) (React 19) |
+| Styling            | Tailwind CSS 4, shadcn/ui, Framer Motion  |
+| Forms & Validation | React Hook Form, Zod                      |
+| State & Auth       | React Context API, JWT-based auth         |
+| Notifications      | Sonner (toasts)                           |
+| Deployment         | Vercel                                    |
 
 ---
 
@@ -42,7 +42,7 @@ ProChesta is a community-driven platform to create, join, and track social servi
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone <https://github.com/hossainahmad/Prochesta-Client>
 cd Prochesta-Client
 
 # Install dependencies
@@ -50,7 +50,7 @@ npm install
 
 # Set up environment variables
 # Create a .env file and add your backend API URL:
-# NEXT_PUBLIC_API_URL=<your-server-url>
+# NEXT_PUBLIC_API_URL=<https://prochesta-server.vercel.app>
 
 # Run the development server
 npm run dev
@@ -62,13 +62,13 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to see the a
 
 ## 📁 Available Scripts
 
-| Script | Description |
-| --- | --- |
-| `npm run dev` | Start the development server |
-| `npm run build` | Build the production bundle |
-| `npm run start` | Start the production server |
-| `npm run lint` | Run ESLint |
+| Script          | Description                  |
+| --------------- | ---------------------------- |
+| `npm run dev`   | Start the development server |
+| `npm run build` | Build the production bundle  |
+| `npm run start` | Start the production server  |
+| `npm run lint`  | Run ESLint                   |
 
 ---
 
-> Made with ❤️ for the community. Together, we create, join, and make an impact.
+> Made with ❤️ for the community.
