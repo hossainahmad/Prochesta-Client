@@ -71,7 +71,7 @@ export function Hero() {
           <p className="max-w-xl text-lg leading-relaxed text-muted-foreground">
             Discover and organize social service events in your neighborhood —
             winter clothes distribution, tree plantation, cleanup drives and
-            more. Volunify connects kind hearts with the causes that need them
+            more. Prochesta connects kind hearts with the causes that need them
             most.
           </p>
 

@@ -1,12 +1,24 @@
 import Link from "next/link";
-import { Facebook, Github, Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
+import {
+  Facebook,
+  Github,
+  Instagram,
+  Mail,
+  MapPin,
+  Phone,
+  Youtube,
+} from "lucide-react";
 import { Logo } from "@/components/site/logo";
 import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/constants";
 
-/** The new X (Twitter rebrand) logo */
 function XLogo({ className }: { className?: string }) {
   return (
-    <svg viewBox="0 0 24 24" fill="currentColor" className={className} aria-hidden="true">
+    <svg
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className={className}
+      aria-hidden="true"
+    >
       <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.451-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644Z" />
     </svg>
   );
@@ -120,8 +132,11 @@ export function Footer() {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="size-4 shrink-0 text-leaf" />
-                <a href="mailto:hello@volunify.test" className="hover:text-leaf">
-                  hello@volunify.test
+                <a
+                  href="mailto:hello@prochesta.test"
+                  className="hover:text-leaf"
+                >
+                  hello@prochest.test
                 </a>
               </li>
             </ul>
@@ -131,8 +146,8 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-6 pb-[max(0.25rem,env(safe-area-inset-bottom))] sm:flex-row">
           <p className="text-xs text-[#9db8a6]">
-            © {new Date().getFullYear()} {SITE_NAME}. Built with 💚 for community
-            volunteers.
+            © {new Date().getFullYear()} {SITE_NAME}. Built with 💚 for
+            community volunteers.
           </p>
           <div className="flex items-center gap-4 text-xs text-[#9db8a6]">
             <span className="cursor-default transition-colors hover:text-leaf">

@@ -4,7 +4,7 @@
  * - Always sends cookies so the httpOnly JWT reaches the server
  */
 export const API_BASE =
-  process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:3001";
+  process.env.NEXT_PUBLIC_API_URL ?? "https://prochesta-server.vercel.app/";
 
 interface ApiResult<T = unknown> {
   ok: boolean;

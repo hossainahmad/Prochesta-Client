@@ -1,11 +1,11 @@
 /**
  * End-to-end smoke test for Volunify (client + server split).
  * Usage: node scripts/e2e-test.mjs [clientUrl] [serverUrl]
- *   default: http://localhost:3000 client, http://localhost:3001 server
+ *   default: http://localhost:3000 client, https://prochesta-server.vercel.app/ server
  * Requirements: production/dev client running + API server running + seeded DB.
  */
 const CLIENT = process.argv[2] || "http://localhost:3000";
-const API = process.argv[3] || "http://localhost:3001";
+const API = process.argv[3] || "https://prochesta-server.vercel.app/";
 const out = {};
 let pass = 0, fail = 0;
 function check(name, cond, extra) {
