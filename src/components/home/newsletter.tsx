@@ -65,7 +65,7 @@ export function Newsletter() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={subscribed}
-            className="h-12 flex-1 border-white/30 bg-white/95 text-foreground placeholder:text-muted-foreground focus-visible:ring-white"
+            className="h-12 flex-1 border-white/30 bg-white/95 text-gray-900 placeholder:text-gray-500 focus-visible:ring-white"
           />
           <Button
             type="submit"
