@@ -123,7 +123,7 @@ export function Hero() {
         >
           <div className="relative aspect-[3/2] overflow-hidden rounded-3xl border shadow-2xl shadow-primary/20">
             <Image
-              src="/images/hero.jpg"
+              src="/images/tree.jpg"
               alt="Volunteers working together at a community service event"
               fill
               priority
