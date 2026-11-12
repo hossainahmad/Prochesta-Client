@@ -42,7 +42,7 @@ ProChesta is a community-driven platform to create, join, and track social servi
 
 ```bash
 # Clone the repository
-git clone <your-repo-url>
+git clone <https://github.com/hossainahmad/Prochesta-Client>
 cd Prochesta-Client
 
 # Install dependencies
