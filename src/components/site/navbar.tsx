@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useAuth } from "@/lib/auth-context";
-import { API_BASE, apiFetch } from "@/lib/api-client";
+import { apiFetch } from "@/lib/api-client";
 import { useTheme } from "next-themes";
 import {
   CalendarPlus,

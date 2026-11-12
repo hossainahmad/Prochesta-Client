@@ -6,8 +6,8 @@ const PROTECTED_ROUTES = ["/create-event", "/manage-events", "/joined-events", "
 const AUTH_PAGES = ["/login", "/register"];
 
 /**
- * Route protection via the JWT the Express API sets in the `auth_token`
- * cookie. Verified locally (HS256) so no network call is needed.
+ * Route protection via the Express API's `auth_token` cookie, relayed through
+ * the same-origin API proxy. Verified locally (HS256), without a network call.
  */
 async function isAuthenticated(req: NextRequest): Promise<boolean> {
   const token = req.cookies.get("auth_token")?.value;

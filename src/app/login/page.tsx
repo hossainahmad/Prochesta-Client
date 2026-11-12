@@ -4,7 +4,7 @@ import * as React from "react";
 import { Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { API_BASE, apiFetch } from "@/lib/api-client";
+import { apiFetch } from "@/lib/api-client";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -67,7 +67,7 @@ function LoginForm() {
   const [googleAvailable, setGoogleAvailable] = React.useState(false);
 
   React.useEffect(() => {
-    fetch(`${API_BASE}/api/auth/providers`, { credentials: "include" })
+    fetch("/api/auth/providers", { credentials: "include" })
       .then((res) => res.json())
       .then((providers) => setGoogleAvailable(Boolean(providers?.google)))
       .catch(() => setGoogleAvailable(false));
@@ -111,7 +111,7 @@ function LoginForm() {
       return;
     }
     // External OAuth host redirect — Next Router cannot handle cross-origin navigation
-    window.location.replace(`${API_BASE}/api/auth/google`);
+    window.location.replace("/api/auth/google");
   };
 
   return (

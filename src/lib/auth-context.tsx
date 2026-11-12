@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { API_BASE } from "./api-client";
+import { apiFetch } from "./api-client";
 
 export interface AuthUser {
   id: string;
@@ -27,8 +27,8 @@ const AuthContext = React.createContext<AuthContextValue>({
 
 /**
  * Lightweight replacement for NextAuth's SessionProvider.
- * The JWT lives in an httpOnly cookie set by the Express server; this
- * context reads /api/auth/me to know whether the user is logged in.
+ * The JWT lives in an httpOnly cookie relayed through the same-origin API
+ * proxy; this context reads /api/auth/me to know whether the user is logged in.
  */
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = React.useState<AuthUser | null>(null);
@@ -36,9 +36,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const refresh = React.useCallback(async () => {
     try {
-      const res = await fetch(`${API_BASE}/api/auth/me`, {
-        credentials: "include",
-      });
+      const res = await apiFetch("/api/auth/me");
       if (!res.ok) {
         setUser(null);
         setStatus("unauthenticated");
